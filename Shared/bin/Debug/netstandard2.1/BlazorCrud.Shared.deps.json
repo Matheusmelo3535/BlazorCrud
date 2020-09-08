@@ -1,0 +1,42 @@
+{
+  "runtimeTarget": {
+    "name": ".NETStandard,Version=v2.1/",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETStandard,Version=v2.1": {},
+    ".NETStandard,Version=v2.1/": {
+      "BlazorCrud.Shared/1.0.0": {
+        "dependencies": {
+          "System.ComponentModel.Annotations": "5.0.0-preview.8.20407.11"
+        },
+        "runtime": {
+          "BlazorCrud.Shared.dll": {}
+        }
+      },
+      "System.ComponentModel.Annotations/5.0.0-preview.8.20407.11": {
+        "runtime": {
+          "lib/netstandard2.1/System.ComponentModel.Annotations.dll": {
+            "assemblyVersion": "5.0.0.0",
+            "fileVersion": "5.0.20.40711"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "BlazorCrud.Shared/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "System.ComponentModel.Annotations/5.0.0-preview.8.20407.11": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-gLaf6wB96McUYmhjNxH6xkIttPbMRREym5DkXV4dUcWpymkING9CLA0NfjQvQ2FaP3sSfgmZBBNyb2rHXh/mqA==",
+      "path": "system.componentmodel.annotations/5.0.0-preview.8.20407.11",
+      "hashPath": "system.componentmodel.annotations.5.0.0-preview.8.20407.11.nupkg.sha512"
+    }
+  }
+}

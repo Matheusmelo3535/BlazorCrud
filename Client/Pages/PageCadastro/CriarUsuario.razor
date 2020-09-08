@@ -1,0 +1,80 @@
+@page "/cadastro"
+
+<h3>Cadastrar novo Usuário</h3>
+
+<EditForm Model="usuario" OnValidSubmit="Create">
+    <DataAnnotationsValidator />
+    <div class="form-row">
+        <div class="form-group col-md-2">
+            <label>Title</label>
+            <InputSelect class="form-control" @bind-Value="@usuario.Title">
+                <option selected>Choose your Title</option>
+                <option>Mr</option>
+                <option>Mrs</option>
+            </InputSelect>
+            <ValidationMessage For="@(()=> usuario.Title)" />
+            
+        </div>
+
+        <div class="form-group col-md-5">
+            <label >First Name</label>
+            <InputText class="form-control" @bind-Value="@usuario.FirstName"></InputText>
+            <ValidationMessage For="@(()=> usuario.FirstName)" />
+        </div>
+
+        <div class="form-group col-md-5">
+            <label >Last Name</label>
+            <InputText class="form-control" @bind-Value="@usuario.LastName"></InputText>
+            <ValidationMessage For="@(()=> usuario.LastName)" />
+            
+        </div>
+
+        <div class="form-group col-md-6">
+            <label>Date of Birth</label>
+            <InputDate class="form-control" @bind-Value="@usuario.DateOfBirth"></InputDate>
+            <ValidationMessage For="@(()=> usuario.DateOfBirth)"/>
+        </div>
+
+        <div class="form-group col-md-6">
+            <label>Email</label>
+            <InputText class="form-control" @bind-Value="@usuario.Email"></InputText>
+            <ValidationMessage For="@(()=> usuario.Email)"/>
+        </div>
+
+        <div class="form-group col-md-6">
+            <label>Password</label>
+            <InputText type="password" class="form-control" @bind-Value="@usuario.Password"></InputText>
+            <ValidationMessage For="@(()=> usuario.Password)"/>
+        </div>
+
+        <div class="form-group col-md-6">
+            <label>Confirm Password</label>
+            <InputText type="password" class="form-control" @bind-Value="@usuario.ConfirmPassword"></InputText>
+            <ValidationMessage For="@(()=> usuario.ConfirmPassword)"/>
+        </div>
+
+        <div class="form-group">
+            <div class="form-check">
+                <InputCheckbox class="form-check-input" @bind-Value="@usuario.AcceptTerms"></InputCheckbox>
+                <label class="form-check-label">
+                    Accept Terms & Conditions
+                </label>
+                <ValidationMessage For="@(()=> usuario.AcceptTerms)"/>
+             </div>
+        </div>
+    </div>
+    <button class="btn btn-success" type="submit">Salvar</button>
+</EditForm>
+
+
+@code{
+    Usuario usuario = new Usuario();
+
+
+    private void Create()
+    {
+        Console.WriteLine("OLA OLA OLA");
+
+
+    }
+}
